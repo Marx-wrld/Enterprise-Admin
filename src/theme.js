@@ -4,7 +4,7 @@ import { createTheme } from "@mui/material/styles";
 //Color design tokens using CTRL K + G, which helps us create the shades for the specified color
 
 export const tokens = (mode) => ({
-    ...createContext(mode === 'dark'
+    ...(mode === 'dark'
     ? {
         grey: {
             100: "#e0e0e0",
@@ -146,7 +146,7 @@ export const themeSettings = (mode) => {
                 background: {
                     default: colors.primary[500],
                 }
-            } : {
+            } : { //Light mode values
                 primary:{
                     main: colors.primary[100],
                 },
@@ -164,34 +164,30 @@ export const themeSettings = (mode) => {
             }),
         },
         typography: {
-            fontFamily: ["Source Sans Pro", sans-serif].join(","),
+            fontFamily: ["Source Sans Pro", "sans-serif"].join(","),
             fontSize: 12,
             h1: {
-                fontFamily: ["Source Sans Pro", sans-serif].join(","),
+                fontFamily: ["Source Sans Pro", "sans-serif"].join(","),
                 fontSize: 40,
             },
             h2: {
-                fontFamily: ["Source Sans Pro", sans-serif].join(","),
+                fontFamily: ["Source Sans Pro", "sans-serif"].join(","),
                 fontSize: 32,
             },
             h3: {
-                fontFamily: ["Source Sans Pro", sans-serif].join(","),
+                fontFamily: ["Source Sans Pro", "sans-serif"].join(","),
                 fontSize: 40,
             },
-            h1: {
-                fontFamily: ["Source Sans Pro", sans-serif].join(","),
-                fontSize: 24,
-            },
             h4: {
-                fontFamily: ["Source Sans Pro", sans-serif].join(","),
+                fontFamily: ["Source Sans Pro", "sans-serif"].join(","),
                 fontSize: 20,
             },
             h5: {
-                fontFamily: ["Source Sans Pro", sans-serif].join(","),
+                fontFamily: ["Source Sans Pro", "sans-serif"].join(","),
                 fontSize: 16,
             },
             h6: {
-                fontFamily: ["Source Sans Pro", sans-serif].join(","),
+                fontFamily: ["Source Sans Pro", "sans-serif"].join(","),
                 fontSize: 14,
             }
         },
@@ -218,5 +214,5 @@ export const useMode = () => {
 
     const theme = useMemo(() => createTheme(themeSettings(mode)), [mode]);
 
-    return { colorMode, theme };
+    return [ theme, colorMode ];
 };
