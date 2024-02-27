@@ -5,7 +5,7 @@ import InputBase from '@mui/material/InputBase';
 import SearchIcon from '@mui/icons-material/Search';
 import DarkModeOutlinedIcon from '@mui/icons-material/DarkModeOutlined';
 import LightModeOutlinedIcon from '@mui/icons-material/LightModeOutlined';
-import NotificationsModeOutlinedIcon from '@mui/icons-material/NotificationsOutlined';
+import NotificationsOutlinedIcon from '@mui/icons-material/NotificationsOutlined';
 import SettingsOutlinedIcon from '@mui/icons-material/SettingsOutlined';
 import PersonOutlinedIcon from '@mui/icons-material/PersonOutlined';
 
@@ -17,13 +17,15 @@ const Topbar = () => {
 
     return (
     <Box 
-        display="flex" justifyContent="space-between" 
+        display="flex" 
+        justifyContent="space-between" 
         p={2}
     >
         {/* Search bar */}
         <Box 
             display="flex" 
-            backgroundColor={colors.primary[400]} borderRadius="3px"
+            backgroundColor={colors.primary[400]} 
+            borderRadius="3px"
         >
             <InputBase sx={{ ml:2, flex: 1}} placeholder="Search"/>
             <IconButton type='button' sx={{ p: 1 }}>
@@ -39,10 +41,9 @@ const Topbar = () => {
                 ) : (
                     <LightModeOutlinedIcon/>
                 )}
-                <LightModeOutlinedIcon/>
             </IconButton>
             <IconButton>
-                <NotificationsModeOutlinedIcon/>
+                <NotificationsOutlinedIcon/>
             </IconButton>
             <IconButton>
                 <SettingsOutlinedIcon/>  
@@ -51,8 +52,6 @@ const Topbar = () => {
                 <PersonOutlinedIcon/>
             </IconButton>
         </Box>
-
-        <IconButton></IconButton>
     </Box>
     )
 }
