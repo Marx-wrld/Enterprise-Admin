@@ -112,7 +112,7 @@ const Sidebar = () => {
                                         Ian Marx
                                     </Typography>
                                     <Typography variant="h5" color={colors.greenAccent[500]}>
-                                        VP Fancy Admin
+                                        VSL Admin
                                     </Typography>
                                 </Box>
                               </Box>
