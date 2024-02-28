@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useProsidebar, Menu, MenuItem } from "react-pro-sidebar";
+import { ProSidebar, Menu, MenuItem } from "react-pro-sidebar";
 import 'react-pro-sidebar/dist/css/styles.css';
 import { Box, IconButton, Typography, useTheme } from "@mui/material";
 import { Link } from "react-router-dom";
@@ -62,7 +62,7 @@ const Sidebar = () => {
                     color: "#6870fa !important",
                 },
             }}>
-                <useProsidebar collapsed={isCollapsed}>
+                <ProSidebar collapsed={isCollapsed}>
                     <Menu iconShape="square">
                         {/* Logo and Menu Icon */}
                         <MenuItem 
@@ -80,13 +80,14 @@ const Sidebar = () => {
                                     alignItems="center"
                                     ml="15px"
                                 >
-                                    <Typography variant="h3" color={colors.grey[100]}>AdminPlus</Typography>
+                                    <Typography variant="h3" color={colors.grey[100]}>AdminX</Typography>
                                     <IconButton onClick={() => setIsCollapsed(!isCollapsed)}>
                                         <MenuOutlined/>
                                     </IconButton>
                                 </Box>
                             )}
                             </MenuItem>
+
                                 {/* User */}
                             {!isCollapsed && (
                                 <Box mb="25px">
@@ -111,11 +112,13 @@ const Sidebar = () => {
                                         Ian Marx
                                     </Typography>
                                     <Typography variant="h5" color={colors.greenAccent[500]}>
-                                        VP Fancy Admin
+                                        VSL Admin
                                     </Typography>
                                 </Box>
                               </Box>
                             )}
+
+                            {/* Menu Items */}
                             <Box paddingLeft={isCollapsed ? undefined : "10%"}>
                                 <Item 
                                     title="Dashboard"
@@ -142,8 +145,9 @@ const Sidebar = () => {
                                         setSelected={setSelected} 
                                     />
                                     <Item 
-                                        title="Invocies Balances"
-                                        to="/invocies"
+                                        title="Invoices Balances"
+                                        to="/invoices"
+                                        icon={<ReceiptOutlined/>}
                                         selected={selected}
                                         setSelected={setSelected}
                                     />
@@ -198,6 +202,13 @@ const Sidebar = () => {
                                         setSelected={setSelected}
                                     />
                                     <Item 
+                                        title="Line Chart"
+                                        to="/line"
+                                        icon={<TimelineOutlined/>}
+                                        selected={selected}
+                                        setSelected={setSelected}
+                                    />
+                                    <Item 
                                         title="Geography Chart"
                                         to="/geography"
                                         icon={<MapOutlined/>}
@@ -206,7 +217,7 @@ const Sidebar = () => {
                                     />
                             </Box>
                         </Menu>
-                </useProsidebar>
+                </ProSidebar>
         </Box>
     );
 }
