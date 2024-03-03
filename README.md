@@ -16,5 +16,4 @@ npm install @fullcalendar/react @fullcalendar/interaction
 ```
 <img width="960" alt="darkDash" src="https://github.com/Marx-wrld/Enterprise-Admin/assets/105711066/68ed1e2d-6d47-483a-9db1-0cc9477c63f4">
 
-
-<img width="954" alt="lightDash" src="https://github.com/Marx-wrld/Enterprise-Admin/assets/105711066/180bf9f9-3f1c-4e0c-95f1-45d66a781443">
+<img width="960" alt="ld" src="https://github.com/Marx-wrld/Enterprise-Admin/assets/105711066/feb04bb6-25e3-4a53-92e5-18aa59f4999b">
